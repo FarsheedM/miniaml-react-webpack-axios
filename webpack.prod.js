@@ -3,6 +3,7 @@ const webpack = require('webpack');
 
 module.exports = {
   mode: 'production',
+  devtool: 'source-map',
   entry: path.resolve(__dirname, './src/index.js'),
   module: {
     rules: [
@@ -22,8 +23,6 @@ module.exports = {
   },
   plugins: [new webpack.HotModuleReplacementPlugin()],
   devServer: {
-    contentBase: path.resolve(__dirname, './dist'),
-    hot: true,
-    port: 9999
+    historyApiFallback: true
   },
 };
