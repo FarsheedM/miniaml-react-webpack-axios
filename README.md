@@ -32,4 +32,5 @@ Read how to set it up yourself: [React with Webpack Tutorial](https://www.robinw
 - cd minimal-react-webpack-babel-setup
 - npm install
 - npm start
-- visit `http://localhost:8080/`
+- visit `http://localhost:9999/`
+- backend should be accessable from `http://localhost:8888/greeting`
