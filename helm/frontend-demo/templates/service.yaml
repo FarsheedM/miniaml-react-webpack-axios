@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "react-frontend.fullname" . }}
+  name: {{ include "frontend-demo.fullname" . }}
   labels:
-    {{- include "react-frontend.labels" . | nindent 4 }}
+    {{- include "frontend-demo.labels" . | nindent 4 }}
 spec:
   type: {{ .Values.service.type }}
   ports:
@@ -12,4 +12,4 @@ spec:
       protocol: TCP
       name: http
   selector:
-    {{- include "react-frontend.selectorLabels" . | nindent 4 }}
+    {{- include "frontend-demo.selectorLabels" . | nindent 4 }}
